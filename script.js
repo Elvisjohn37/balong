@@ -4,16 +4,16 @@
             'users',
             JSON.stringify([
                 {
-                    username: 'sampleuser',
+                    username: 'burat',
                     email: 'sdsd@dsdsd.com',
-                    password: 'samplepass1!',
+                    password: 'passburat',
                     firstname: 'dddddd',
                     lastname: 'dddddddd',
                 },
                 {
-                    username: 'sampleuser1',
+                    username: 'burat1',
                     email: 'sdsd@dsdsd.com',
-                    password: 'samplepass1!1',
+                    password: 'passburat1',
                     firstname: 'dddddd',
                     lastname: 'dddddddd',
                 },

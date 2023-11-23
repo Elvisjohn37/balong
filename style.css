@@ -277,8 +277,7 @@ input[type=password] {
 .form-control label{
     display: inline-block;
 }
-.form-control input{
-    border: 2px solid #f0f0f0;
+.form-control input {
     border-radius: 4px;
     display: block;
     font-family: inherit;
@@ -289,10 +288,19 @@ input[type=password] {
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
-    border-radius: 8px;
     outline: none;
     margin-bottom: 1px;
+    transition: 0.3s;
+    border-color: transparent;
+    
 }
+
+.form-control input:focus {
+    box-shadow: 0 2px 6px #00000033;
+    transform: scale(1.1);
+    border-bottom: 1px solid #00000041;
+}
+
 .form-control.success input{
     border-color: green ;
 }
@@ -435,4 +443,13 @@ input[type=password] {
 .login-content .content button, .login-content .content .welcome-text, .login-content .content .features-text {
     position: relative;
     top: unset;
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 3px 6px #000000c5;
+    transform: scale(1.1);
 }
