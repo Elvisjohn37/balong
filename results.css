@@ -21,6 +21,9 @@ header {
     display: flex;
     padding: 20px 40px;
     justify-content: space-between;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
 }
 
 #logo {
@@ -50,8 +53,18 @@ header h1 {
     top: 0;
 }
 
+.content::before {
+    position: absolute;
+    content: '';
+    width: 800px;
+    height: 800px;
+    background-color: #8181811c;
+    transform: rotate(36deg) translate(412px, -50px);
+}
+
 #profileData {
     margin-top: 20px;
+    z-index: 3;
 }
 
 #profileData .design {
@@ -62,7 +75,7 @@ header h1 {
 #profileData .design div {
     transition: 0.3s;
     border-radius: 4px;
-    padding: 0 5px;
+    padding: 0 20px;
 }
 
 #profileData .design #logout {
@@ -79,6 +92,12 @@ header h1 {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 10px;
+    transition: 0.3s;
+}
+
+#profileData .design #logout:hover {
+    box-shadow: 0 3px 6px #000000c5;
+    transform: scale(1.1);
 }
 
 #profileData .design div:hover {
