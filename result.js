@@ -1,9 +1,5 @@
 let LoginUser =
-    JSON.parse(localStorage.getItem('users')) ||
-    [].find((user) => user.isLogin) ||
-    {}
-
-LoginUser.length > 0 && (LoginUser = LoginUser[0])
+    JSON.parse(localStorage.getItem('users')).find((user) => user.isLogin) || {}
 
 const init = (() => {
     !LoginUser.isLogin && (location.href = './login.html')
@@ -27,6 +23,6 @@ const setInfo = (() => {
                 )
             )
         )
-        location.reload()
+        location.href = './login.html'
     })
 })()

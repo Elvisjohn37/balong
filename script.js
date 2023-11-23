@@ -1,9 +1,42 @@
-let LoginUser =
-    JSON.parse(localStorage.getItem('users')) ||
-    [].find((user) => user.isLogin) ||
-    {}
+;(() => {
+    !JSON.parse(localStorage.getItem('users')) &&
+        localStorage.setItem(
+            'users',
+            JSON.stringify([
+                {
+                    username: 'sampleuser',
+                    email: 'sdsd@dsdsd.com',
+                    password: 'samplepass1!',
+                    firstname: 'dddddd',
+                    lastname: 'dddddddd',
+                },
+                {
+                    username: 'sampleuser1',
+                    email: 'sdsd@dsdsd.com',
+                    password: 'samplepass1!1',
+                    firstname: 'dddddd',
+                    lastname: 'dddddddd',
+                },
+                {
+                    username: 'sampleuser2',
+                    email: 'sdsd@dsdsd.com',
+                    password: 'samplepass1!2',
+                    firstname: 'dddddd',
+                    lastname: 'dddddddd',
+                },
+                {
+                    username: 'sampleuser3',
+                    email: 'sdsd@dsdsd.com',
+                    password: 'samplepass1!3',
+                    firstname: 'dddddd',
+                    lastname: 'dddddddd',
+                },
+            ])
+        )
+})()
 
-LoginUser.length > 0 && (LoginUser = LoginUser[0])
+let LoginUser =
+    JSON.parse(localStorage.getItem('users')).find((user) => user.isLogin) || {}
 
 const init = (() => {
     LoginUser.isLogin && (location.href = './results.html')
