@@ -20,12 +20,27 @@ body{
 .container{
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
     width: 1180px;
     max-width: 100%;
     min-height: 680px;
+    transition: 0.3s;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(200px);
+    }   
+    to {
+        transform: unset;
+        opacity: 1;
+    }
 }
 
 .container p{
@@ -52,7 +67,7 @@ body{
     font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -318,7 +333,7 @@ input[type=password] {
 .form-control input:focus {
     box-shadow: 0 2px 6px #00000033;
     transform: scale(1.1);
-    border-bottom: 1px solid #00000041;
+    border-bottom-color:#00000041;
 }
 
 .form-control.success input{
@@ -357,7 +372,7 @@ input[type=password] {
     font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
