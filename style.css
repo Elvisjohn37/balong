@@ -35,7 +35,7 @@ body{
 
 @keyframes fadeIn {
     from {
-        transform: translateX(200px) rotate(5deg);
+        transform: translateX(200px);
     }   
     to {
         transform: unset;
@@ -220,9 +220,7 @@ input[type=password] {
 }
 
 .toggle{
-    background-color: #8c0000;
     height: 100%;
-    background: linear-gradient(to right, #000000, #8c0000);
     color: #fff;
     position: relative;
     left: -100%;
@@ -287,6 +285,7 @@ input[type=password] {
 
 .toggle-left{
     transform: translateX(-200%);
+    background: linear-gradient(to right, #000000, #8c0000);
 }
 
 .container.active .toggle-left{
@@ -296,6 +295,7 @@ input[type=password] {
 .toggle-right{
     right: 0;
     transform: translateX(0);
+    background: linear-gradient(to right, #8c0000, #000000);
 }
 
 .container.active .toggle-right{
